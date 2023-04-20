@@ -8,7 +8,7 @@ See original Firebase docs: https://firebase.google.com/docs/
 #Setup
 Install via Composer:
 ```
-composer require sngrl/php-firebase-cloud-messaging
+composer require kalisport/php-firebase-cloud-messaging
 ```
 
 Or add this to your composer.json and run "composer update":
@@ -21,10 +21,10 @@ Or add this to your composer.json and run "composer update":
 
 #Send message to Device
 ```
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
+use kalisport\PhpFirebaseCloudMessaging\Client;
+use kalisport\PhpFirebaseCloudMessaging\Message;
+use kalisport\PhpFirebaseCloudMessaging\Recipient\Device;
+use kalisport\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -32,7 +32,7 @@ $client->setApiKey($server_key);
 $client->injectGuzzleHttpClient(new \GuzzleHttp\Client());
 
 $message = new Message();
-$message->setPriority('high');
+$message->setPriority('high'); // Only for Android
 $message->addRecipient(new Device('_YOUR_DEVICE_TOKEN_'));
 $message
     ->setNotification(new Notification('some title', 'some body'))
@@ -49,7 +49,7 @@ var_dump($response->getBody()->getContents());
 ```
 ...
 $message = new Message();
-$message->setPriority('high');
+$message->setPriority('high'); // Only for Android
 $message->addRecipient(new Device('_YOUR_DEVICE_TOKEN_'));
 $message->addRecipient(new Device('_YOUR_DEVICE_TOKEN_2_'));
 $message->addRecipient(new Device('_YOUR_DEVICE_TOKEN_3_'));
@@ -62,10 +62,10 @@ $message
 #Send message to Topic
 
 ```
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
+use kalisport\PhpFirebaseCloudMessaging\Client;
+use kalisport\PhpFirebaseCloudMessaging\Message;
+use kalisport\PhpFirebaseCloudMessaging\Recipient\Topic;
+use kalisport\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -92,7 +92,7 @@ See Firebase documentation for sending to [combinations of multiple topics](http
 ```
 ...
 $message = new Message();
-$message->setPriority('high');
+$message->setPriority('high'); // Only for Android
 $message->addRecipient(new Topic('_YOUR_TOPIC_'));
 $message->addRecipient(new Topic('_YOUR_TOPIC_2_'));
 $message->addRecipient(new Topic('_YOUR_TOPIC_3_'));
@@ -107,7 +107,7 @@ $message
 
 #Subscribe user to the topic
 ```
-use sngrl\PhpFirebaseCloudMessaging\Client;
+use kalisport\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -121,7 +121,7 @@ var_dump($response->getBody()->getContents());
 
 #Remove user subscription to the topic
 ```
-use sngrl\PhpFirebaseCloudMessaging\Client;
+use kalisport\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
