@@ -15,7 +15,7 @@ Or add this to your composer.json and run "composer update":
 
 ```
 "require": {
-    "sngrl/php-firebase-cloud-messaging": "dev-master"
+    "kalisport/php-firebase-cloud-messaging": "dev-master"
 }
 ```
 
