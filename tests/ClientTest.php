@@ -1,9 +1,10 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Tests;
 
-use sngrl\PhpFirebaseCloudMessaging\Client;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Message;
+namespace Kalisport\PhpFirebaseCloudMessaging\Tests;
+
+use Kalisport\PhpFirebaseCloudMessaging\Client;
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Topic;
+use Kalisport\PhpFirebaseCloudMessaging\Message;
 
 use GuzzleHttp;
 use GuzzleHttp\Psr7\Response;

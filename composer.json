@@ -6,8 +6,8 @@
     "homepage": "https://github.com/kalisport/php-firebase-cloud-messaging",
     "authors": [
         {
-            "name": "Sngrl",
-            "email": "i@sngrl.ru"
+            "name": "Kalisport",
+            "email": "contact@kalisport.com"
         }
     ],
     "require": {
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "kalisport\\PhpFirebaseCloudMessaging\\": "src/"
+            "Kalisport\\PhpFirebaseCloudMessaging\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "kalisport\\PhpFirebaseCloudMessaging\\Tests\\": "tests/"
+            "Kalisport\\PhpFirebaseCloudMessaging\\Tests\\": "tests/"
         }
     }
 }

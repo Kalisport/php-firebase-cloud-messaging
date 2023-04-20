@@ -1,5 +1,6 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Tests;
+
+namespace Kalisport\PhpFirebaseCloudMessaging\Tests;
 
 class PhpFirebaseCloudMessagingTestCase extends \PHPUnit_Framework_TestCase
 {

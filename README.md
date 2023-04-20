@@ -5,26 +5,26 @@ Currently this app server library only supports sending Messages/Notifications v
 
 See original Firebase docs: https://firebase.google.com/docs/
 
-#Setup
+## Setup
 Install via Composer:
 ```
-composer require kalisport/php-firebase-cloud-messaging
+composer require Kalisport/php-firebase-cloud-messaging
 ```
 
 Or add this to your composer.json and run "composer update":
 
 ```
 "require": {
-    "kalisport/php-firebase-cloud-messaging": "dev-master"
+    "Kalisport/php-firebase-cloud-messaging": "dev-master"
 }
 ```
 
-#Send message to Device
+## Send message to Device
 ```
-use kalisport\PhpFirebaseCloudMessaging\Client;
-use kalisport\PhpFirebaseCloudMessaging\Message;
-use kalisport\PhpFirebaseCloudMessaging\Recipient\Device;
-use kalisport\PhpFirebaseCloudMessaging\Notification;
+use Kalisport\PhpFirebaseCloudMessaging\Client;
+use Kalisport\PhpFirebaseCloudMessaging\Message;
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Device;
+use Kalisport\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -44,7 +44,7 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Send message to multiple Devices
+## Send message to multiple Devices
 
 ```
 ...
@@ -59,13 +59,13 @@ $message
 ;
 ...
 ```
-#Send message to Topic
+## Send message to Topic
 
 ```
-use kalisport\PhpFirebaseCloudMessaging\Client;
-use kalisport\PhpFirebaseCloudMessaging\Message;
-use kalisport\PhpFirebaseCloudMessaging\Recipient\Topic;
-use kalisport\PhpFirebaseCloudMessaging\Notification;
+use Kalisport\PhpFirebaseCloudMessaging\Client;
+use Kalisport\PhpFirebaseCloudMessaging\Message;
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Topic;
+use Kalisport\PhpFirebaseCloudMessaging\Notification;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -85,7 +85,7 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Send message to multiple Topics
+## Send message to multiple Topics
 
 See Firebase documentation for sending to [combinations of multiple topics](https://firebase.google.com/docs/cloud-messaging/topic-messaging#sending_topic_messages_from_the_server).
 
@@ -105,9 +105,9 @@ $message
 ...
 ```
 
-#Subscribe user to the topic
+## Subscribe user to the topic
 ```
-use kalisport\PhpFirebaseCloudMessaging\Client;
+use Kalisport\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();
@@ -119,9 +119,9 @@ var_dump($response->getStatusCode());
 var_dump($response->getBody()->getContents());
 ```
 
-#Remove user subscription to the topic
+## Remove user subscription to the topic
 ```
-use kalisport\PhpFirebaseCloudMessaging\Client;
+use Kalisport\PhpFirebaseCloudMessaging\Client;
 
 $server_key = '_YOUR_SERVER_KEY_';
 $client = new Client();

@@ -1,11 +1,12 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Tests;
 
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Recipient;
-use sngrl\PhpFirebaseCloudMessaging\Message;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Topic;
-use sngrl\PhpFirebaseCloudMessaging\Notification;
-use sngrl\PhpFirebaseCloudMessaging\Recipient\Device;
+namespace Kalisport\PhpFirebaseCloudMessaging\Tests;
+
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Recipient;
+use Kalisport\PhpFirebaseCloudMessaging\Message;
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Topic;
+use Kalisport\PhpFirebaseCloudMessaging\Notification;
+use Kalisport\PhpFirebaseCloudMessaging\Recipient\Device;
 
 class MessageTest extends PhpFirebaseCloudMessagingTestCase
 {

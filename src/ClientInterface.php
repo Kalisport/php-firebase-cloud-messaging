@@ -1,11 +1,12 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging;
+
+namespace Kalisport\PhpFirebaseCloudMessaging;
 
 use GuzzleHttp;
 
 /**
  *
- * @author sngrl
+ * @author Kalisport
  *
  */
 interface ClientInterface
@@ -17,17 +18,17 @@ interface ClientInterface
      *
      * @param string $apiKey
      *
-     * @return \sngrl\PhpFirebaseCloudMessaging\Client
+     * @return \Kalisport\PhpFirebaseCloudMessaging\Client
      */
     function setApiKey($apiKey);
-    
+
 
     /**
      * people can overwrite the api url with a proxy server url of their own
      *
      * @param string $url
      *
-     * @return \sngrl\PhpFirebaseCloudMessaging\Client
+     * @return \Kalisport\PhpFirebaseCloudMessaging\Client
      */
     function setProxyApiUrl($url);
 
@@ -41,6 +42,4 @@ interface ClientInterface
      * @throws \GuzzleHttp\Exception\RequestException
      */
     function send(Message $message);
-    
 }
-   

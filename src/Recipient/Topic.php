@@ -1,5 +1,6 @@
 <?php
-namespace sngrl\PhpFirebaseCloudMessaging\Recipient;
+
+namespace Kalisport\PhpFirebaseCloudMessaging\Recipient;
 
 class Topic extends Recipient
 {
