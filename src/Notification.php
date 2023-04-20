@@ -50,7 +50,8 @@ class Notification extends Message
     }
 
     /**
-     * android only, set the name of your drawable resource as string
+     * Set the name of your drawable resource as string
+     * Android only
      *
      * @param string $icon
      * @return $this
