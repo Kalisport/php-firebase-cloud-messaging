@@ -8,14 +8,14 @@ See original Firebase docs: https://firebase.google.com/docs/
 ## Setup
 Install via Composer:
 ```
-composer require Kalisport/php-firebase-cloud-messaging
+composer require kalisport/php-firebase-cloud-messaging
 ```
 
 Or add this to your composer.json and run "composer update":
 
 ```
 "require": {
-    "Kalisport/php-firebase-cloud-messaging": "dev-master"
+    "kalisport/php-firebase-cloud-messaging": "dev-master"
 }
 ```
 
